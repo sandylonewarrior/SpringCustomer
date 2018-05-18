@@ -13,15 +13,15 @@ import javax.persistence.Table;
 
 import lombok.Data;
 
-/*@Data
-@Entity
+@Data
+/*@Entity
 @Table(name = "customer")*/
 public class Customer {
 
 	/*@Id
 	@GeneratedValue
 	@Column(name = "customer_id")*/
-	private int id;
+	private long id;
 	
 	//@Column(name = "cust_name")
 	private String firstName;
@@ -39,7 +39,8 @@ public class Customer {
 		
 	}
 
-	public Customer(String firstName, int phone) {
+	public Customer(int id,String firstName, int phone) {
+		this.id = id;
 		this.firstName = firstName;
 		this.phone = phone;
 	}

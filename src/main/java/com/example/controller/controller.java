@@ -58,7 +58,7 @@ public class controller {
 		return model;
 	}
 	
-	@RequestMapping(value = "/CustomerSearch", method = RequestMethod.GET)
+	@RequestMapping(value = "/CustomerSearch/{id}", method = RequestMethod.GET)
 	public ModelAndView getCustomerDetails(@ModelAttribute("id") int id, BindingResult result){
 		if(result.hasErrors()) {
 			ModelAndView model = new ModelAndView("CustomerSearch");
