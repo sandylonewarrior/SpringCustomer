@@ -1,5 +1,6 @@
 package com.example.controller;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.ModelAttribute;
@@ -8,13 +9,14 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
 
 import com.example.model.Customer;
+import com.example.service.CustomerService;
 
 @Controller
 public class controller {
 	
 	
-	//@Autowired
-	//private CustomerDao customerDao;
+	@Autowired
+	private CustomerService customerService;
 	
 	@RequestMapping(value = "/", method = RequestMethod.GET)
 	public ModelAndView getLogin() {
@@ -56,6 +58,17 @@ public class controller {
 		return model;
 	}
 	
+	@RequestMapping(value = "/CustomerSearch", method = RequestMethod.GET)
+	public ModelAndView getCustomerDetails(@ModelAttribute("id") int id, BindingResult result){
+		if(result.hasErrors()) {
+			ModelAndView model = new ModelAndView("CustomerSearch");
+			return model;
+		}
+		ModelAndView model = new ModelAndView("showCustomerDetails");
+		
+		model.addObject("message", "Customer Details");
+		return model;
+	}
 	
 	
 	
