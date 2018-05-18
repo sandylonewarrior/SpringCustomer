@@ -44,5 +44,10 @@ public class Customer {
 		this.firstName = firstName;
 		this.phone = phone;
 	}
+	
+	@Override
+	public String toString() {
+		return " Customer("+ id + "," + firstName + "," + phone +")"; 
+	}
 
 }

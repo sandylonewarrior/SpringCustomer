@@ -1,5 +1,7 @@
 package com.example.controller;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.validation.BindingResult;
@@ -65,11 +67,18 @@ public class controller {
 			return model;
 		}
 		ModelAndView model = new ModelAndView("showCustomerDetails");
-		
+		Customer customer = customerService.findById(id);
 		model.addObject("message", "Customer Details");
 		return model;
 	}
 	
+	@RequestMapping(value = "/Customer/", method = RequestMethod.GET)
+    public ModelAndView listAllUsers() {
+		ModelAndView model = new ModelAndView("showCustomerDetails");
+		List<Customer> customers = customerService.findAllCustomers();
+		return model;
+	}
+		
 	
 	
 }
