@@ -68,16 +68,19 @@ public class controller {
 		}
 		ModelAndView model = new ModelAndView("showCustomerDetails");
 		Customer customer = customerService.findById(id);
-		model.addObject("message", "Customer Details");
+		model.addObject("customerdetails", customer);
 		return model;
 	}
 	
 	@RequestMapping(value = "/Customer/", method = RequestMethod.GET)
     public ModelAndView listAllUsers() {
-		ModelAndView model = new ModelAndView("showCustomerDetails");
+		ModelAndView model = new ModelAndView("showAllCustomerDetails");
 		List<Customer> customers = customerService.findAllCustomers();
+		model.addObject("allCustomers", customers);
 		return model;
 	}
+	
+	
 		
 	
 	
