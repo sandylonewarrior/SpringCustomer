@@ -7,6 +7,8 @@
 <title>Insert title here</title>
 </head>
 <body>
-
+<tr>
+<td>{allCustomers} </td>
+</tr>
 </body>
 </html>

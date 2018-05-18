@@ -15,8 +15,8 @@
 			</thead>
 			<tbody>
 				<tr>
-					<td>Customer Id</td>
-					<td>${customer}</td>
+					<td>Customer :</td>
+					<td>${customerdetails}</td>
 					<!-- <td><input type="text" name="customerId" /></td>
 				</tr>
 				<tr>

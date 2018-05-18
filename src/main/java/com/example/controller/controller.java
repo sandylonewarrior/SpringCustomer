@@ -74,7 +74,7 @@ public class controller {
 	
 	@RequestMapping(value = "/Customer/", method = RequestMethod.GET)
     public ModelAndView listAllUsers() {
-		ModelAndView model = new ModelAndView("showAllCustomerDetails");
+		ModelAndView model = new ModelAndView("diplayCustomers");
 		List<Customer> customers = customerService.findAllCustomers();
 		model.addObject("allCustomers", customers);
 		return model;
