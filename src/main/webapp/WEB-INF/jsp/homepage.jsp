@@ -17,10 +17,10 @@
 <div class="container">
 <h2>Welcome to customer application</h2>
 	<div class="list-group">
-		<a href="/Customer_JSP/views/CustomerSearch.jsp" class="list-group-item">Show Customers</a> 
-		<a href="/Customer_JSP/views/addCustomer.jsp" class="list-group-item">Add Customer</a> 
-		<a href="/Customer_JSP/views/addProduct.jsp" class="list-group-item">Add Product</a> 
-		<a href="/Customer_JSP/views/placeOrder.jsp" class="list-group-item">Place Order </a>
+		<a href="${contextPath}/CustomerSearch" class="list-group-item">Show Customers</a> 
+		<a href="${contextPath}/addCustomer" class="list-group-item">Add Customer</a> 
+		<a href="${contextPath}/addProduct" class="list-group-item">Add Product</a> 
+		<a href="${contextPath}/placeOrder" class="list-group-item">Place Order </a>
 	</div>
 </div>
 </body>

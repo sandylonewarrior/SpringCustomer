@@ -7,7 +7,16 @@
 <title>Insert title here</title>
 </head>
 <body>
-
+<div>
+<table>
+<tr>
+${customerDetails.firstName}
+</tr>
+<tr>
+${customerDetails.address}
+</tr>
+</table>
+</div>
 
 </body>
 </html>

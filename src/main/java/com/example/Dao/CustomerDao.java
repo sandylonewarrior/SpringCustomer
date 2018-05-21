@@ -1,7 +1,7 @@
-package com.example.Dao;
+/*package com.example.Dao;
 
-import org.hibernate.Session;
 import org.hibernate.SessionFactory;
+
 import com.example.Util.CustomerUtil;
 import com.example.model.Customer;
 
@@ -61,3 +61,4 @@ public class CustomerDao {
 		return true;
 	}
 }
+*/

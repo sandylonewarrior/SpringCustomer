@@ -4,16 +4,16 @@ import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 import java.util.concurrent.atomic.AtomicLong;
- 
+
 import org.springframework.stereotype.Service;
-import org.springframework.transaction.annotation.Transactional;
+//import org.springframework.transaction.annotation.Transactional;
 
 import com.example.model.Customer;
  
 
  
 @Service("customerService")
-@Transactional
+//@Transactional
 public class CustomerServiceImpl implements CustomerService{
      
     private static final AtomicLong counter = new AtomicLong();

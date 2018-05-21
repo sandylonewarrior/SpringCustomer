@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-    pageEncoding="ISO-8859-1" isELIgnored="false"%>
+	pageEncoding="ISO-8859-1" isELIgnored="false"%>
+	<%@ taglib uri="http://www.springframework.org/tags/form" prefix="form" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -7,29 +8,20 @@
 <title>Customer Search</title>
 </head>
 <body>
-		<table>
-			<thead>
+	<div class="container">
+		<a href="/homepage"> Home New </a>
+		<form method="POST" action="<%= request.getContextPath() %>/getCustomerDetails">
+			<table>
 				<tr>
-					<th>Customer Search</th>
-				</tr>
-			</thead>
-			<tbody>
-				<tr>
-					<td>Customer :</td>
-					<td>${customerdetails}</td>
-					<!-- <td><input type="text" name="customerId" /></td>
+					<td>Enter Customer Id:</td>
+					<td><input type="text" name="customerId" /></td>
 				</tr>
 				<tr>
-					<td>Customer phone</td>
-					<td>${customer.phone}</td>
-					<!-- <td><input type="text" name="customerPhone" /></td>
+					<td colspan="1"><input type="submit" value="Search"></td>
 				</tr>
-				<tr>
-					<td colspan="1"><input type="submit" value="Search"></td> -->
-				</tr>
-				<a href="/Customer_JSP/views/homepage.jsp"> Home </a>
-			</tbody>
-		</table>
-	
+			</table>
+		</form>
+	</div>
+
 </body>
 </html>

@@ -44,13 +44,12 @@
 <body>
 <body>
 	<div class="login-form">
-		<form action="/jsp/homepage.jsp" method="post">
+		<form action="${contextPath}/homepage" method="GET">
 			<h2 class="text-center">Log in</h2>
 			<div class="form-group">
 				<input type="text" class="form-control" placeholder="Username"
 					required="required">
 			</div>
-			<div>{message} </div>
 			<div class="form-group">
 				<input type="password" class="form-control" placeholder="Password"
 					required="required">

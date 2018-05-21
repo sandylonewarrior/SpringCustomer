@@ -43,11 +43,11 @@
 </style>
 </head>
 <body>
-	<a class="text-left" href="/jsp/addCustomer.jsp"> Home
+	<a class="text-left" href="${contextPath}/homepage"> Home
 	</a>
-	<div class="homepage">
+	<div class="container">
 		<form:errors  path =  "customer.*"/>
-		<form:form method = "POST" action="/SpringCustomerApp/addCustomer.html">
+		<form:form method = "GET" action="${contextPath}/customerSucess">
 			<h2 class="text-left">Enter customer details</h2>
 			<label class="control-label col-sm-2" for="firstName"> Name:</label>
 			<div class="form-group">

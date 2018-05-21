@@ -12,8 +12,6 @@ public class Address {
 	private String aptNo;
 	//@Column(name = "country")
 	private String country;
-	//@Column(name = "phone")
-	private int phone;
 	
 	public Address() {
 		
@@ -24,6 +22,11 @@ public class Address {
 		this.state = state;
 		this.aptNo = aptNo;
 		this.country = country;
+	}
+	
+	@Override
+	public String toString() {
+		return city+" "+ state +" "+ aptNo + " "+ country;
 	}
 
 }

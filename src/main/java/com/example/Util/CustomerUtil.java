@@ -1,10 +1,7 @@
 package com.example.Util;
 
-import org.hibernate.SessionFactory;
-import org.hibernate.cfg.Configuration;
-
 public class CustomerUtil {
-	private static SessionFactory sessionFactory = buildSessionFactory();
+	/*private static SessionFactory sessionFactory = buildSessionFactory();
 
 
 	private static SessionFactory buildSessionFactory() {
@@ -21,5 +18,5 @@ public class CustomerUtil {
 
 	public static SessionFactory getSessionFactory() {
 		return sessionFactory;
-	}
+	}*/
 }
