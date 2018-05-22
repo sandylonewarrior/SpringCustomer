@@ -16,7 +16,7 @@ public interface CustomerService {
 
 	void updateCustomer(Customer customer);
 
-	void deleteCustomerById(long id);
+	boolean deleteCustomerById(long id);
 
 	boolean isCustomerExist(Customer customer);
 

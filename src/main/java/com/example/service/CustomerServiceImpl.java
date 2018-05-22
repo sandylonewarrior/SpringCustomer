@@ -62,7 +62,7 @@ public class CustomerServiceImpl implements CustomerService{
     }
  
     @Override
-	public void deleteCustomerById(long id) {
+	public boolean deleteCustomerById(long id) {
          
         for (Iterator<Customer> iterator = customers.iterator(); iterator.hasNext(); ) {
             Customer customer = iterator.next();
@@ -70,6 +70,7 @@ public class CustomerServiceImpl implements CustomerService{
                 iterator.remove();
             }
         }
+        return true;
     }
  
     @Override
